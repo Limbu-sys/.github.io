@@ -1,3 +1,4 @@
+Сергей, [30.06.2025 16:28]
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -44,6 +45,7 @@
       white-space: nowrap;
       background: #eaecef;
       border-bottom: 1px solid #ccc;
+      scroll-behavior: smooth;
     }
 
     .tab {
@@ -152,18 +154,20 @@
   </ul>
 </div>
 
+Сергей, [30.06.2025 16:28]
 <script>
-  const tabs = document.querySelectorAll('.tab');
-  const contents = document.querySelectorAll('.tab-content');
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
 
-Сергей, [30.06.2025 16:21]
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
 
-      tab.classList.add('active');
-      document.getElementById(tab.dataset.tab).classList.add('active');
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
     });
   });
 </script>
